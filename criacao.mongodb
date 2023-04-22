@@ -1,0 +1,210 @@
+use("esteticaDB");
+
+db.createCollection("salao");
+
+/* 
+  Cada salão de beleza vai conter:
+    - CNPJ
+    - Nome
+    - Local
+    - Telefone
+    - Avaliação
+    - Horário de Atendimento
+    - Dias de funcionamento
+    - Redes Sociais
+
+*/
+
+db.salao.insertMany(
+  [
+    {
+      cnpj: "13295111000114",
+      nome: "Espaco Ella's",
+      local: "Avenida Estrada do Curado, 114, Jardim São Paulo, Recife - PE",
+      avaliacao: 4.7,
+      dias_funcionamento: ["Segunda-Feira","Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira"],
+      redes_sociais: {
+        "instagram": "espacoellasjsp",
+        "whatsapp": "(81) 98601-9566"
+      }
+
+    },
+
+    cnpj: "36968331000167",
+    nome: "Trois Beauté",
+    local: "Avenida Conselheiro Aguiar, 3350, Boa Viagem, Recife - PE",
+    avaliacao: 4.5,
+    dias_funcionamento: ["Segunda-Feira","Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sábado"],
+    redes_sociais: {
+      "instagram": "troisbeaute"
+      "whatsapp": "(81) 3019-3040",
+      "site": "troisbeaute.com.br"
+    },
+
+    cnpj: "09570091000175",
+    nome: "Karenina's",
+    local: "Rua Coronel Anizío Rodrigues Coelho, 450, Boa Viagem, Recife - PE",
+    avaliacao: 4.8,
+    dias_funcionamento: ["Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sábado"],
+    redes_sociais: {
+      "instagram": "kareninascentrodebeleza",
+      "whatsapp": "(81) 99711-8203",
+    },
+
+    cnpj: "32151976000151",
+    nome: "Espaço MC",
+    local: "Rua Francisca Benigna Cavalcante, 336, Mustardinha, Recife - PE",
+    avaliacao: 4.7,
+    dias_funcionamento: ["Segunda-Feira","Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sábado"],
+    redes_sociais: {
+      "whatsapp": "(81) 99825-5151",
+      "site": "espaco-mc.negocio.site"
+    },
+
+    cnpj: "44665162000114",
+    nome: "BiiaCabelos",
+    local: "Rua Tamboara, 428, Água Fria, Recife - PE",
+    avaliacao: 5.0,
+    dias_funcionamento: ["Quinta-Feira", "Sexta-Feira", "Sábado"],
+    redes_sociais: {
+      "instagram": "biiacabelos",
+      "whatsapp": "(81) 99703-8699"
+    },
+
+    cnpj: "10299564000120",
+    nome: "L'Adresse Studio de Beleza",
+    local:  "Rua Antônio Falcão, 383 - loja 05, Boa Viagem, Recife - PE",
+    avaliacao: 4.2,
+    dias_funcionamento: ["Segunda-Feira","Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sábado", "Domingo"],
+    redes_sociais: {
+      "instagram": "ladressebeleza",
+      "whatsapp": "(81) 99639-0018"
+    },
+
+    cnpj: "23994314000152",
+    nome: "Studio Thatá Shinydêr",
+    local: "Rua Gavinha, 232, Brejo da Guabiraba, Recife - PE",
+    avaliacao: 4.8,
+    dias_funcionamento: ["Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sábado"],
+    redes_sociais: {
+      "whatsapp": "(81) 98633-5283"
+    },
+
+    cnpj: "08036470000117",
+    nome: "Gorett's Office Hair",
+    local: "Rua Presidente Kennedy, 2951, Peixinhos, Olinda - PE",
+    avaliacao: 4.5,
+    dias_funcionamento: ["Segunda-Feira","Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sábado"],
+    redes_sociais: {
+      "whatsapp": "(81) 3443-6596",
+      "instagram": "layspiresbeauty"
+    },
+  ],
+
+  {
+    ordered: false
+  }
+);
+
+db.createCollection("profissionais");
+
+/* 
+  Cada profissional vai ter:
+    - CPF
+    - Nome
+    - Data de nascimento
+    - Formação
+    - Função
+    - Trabalha_em
+
+    Para vincular um profissional a um salão, iremos realizar uma consulta com o "findOne" buscando pelo CNPJ do sação e o inserindo no array de profissionais que trabalham nesse salão.
+
+*/
+
+db.profissionais.insertMany(
+  [
+    {
+      cpf: "85510724102",
+      nome: "Marcelo Santana",
+      data_nascimento: new ISODate("2002-03-02"),
+      formacao: [{
+        nome: "Técnico em Estética",
+        instituicao: "Instituto Embellezze",
+        data: new ISODate("2020-06-01")
+      }],
+      trabalha_em: [db.salao.findOne({cnpj: "08036470000117"})],
+      funcao: "Manicure"
+    },
+
+    {
+      cpf: "58742105369",
+      nome: "Ícaro Geovanny",
+      data_nascimento: new ISODate("2002-05-09"),
+      trabalha_em: [db.salao.findOne({cnpj: "09570091000175"})],
+      funcao: "Recepcionista"
+    },
+
+    {
+      cpf: "25848720196",
+      nome: "Eliab Bernardino",
+      data_nascimento: new ISODate("2001-08-10"),
+      trabalha_em: [db.salao.findOne({cnpj: "09570091000175"}), db.salao.findOne({cnpj: "23994314000152"})],
+      funcao: "Vigilante"
+    },
+
+    {
+      cpf: "85410269845",
+      nome: "Tomás Nascimento",
+      data_nascimento: new ISODate("1996-07-12"),
+      formacao: [
+        {
+          nome: "Bacharel em Estética e Cosmética",
+          instituicao: "Estácio",
+          data: new ISODate("2020-08-17")
+        },
+        {
+          nome: "Técnico em Estética",
+          instituicao: "Grau Técnico",
+          data: new ISODate("2022-03-12")
+        }
+      ],
+      trabalha_em: [db.salao.findOne({cnpj: "10299564000120"})],
+      funcao: "Cabeleireiro"
+    },
+
+    {
+      cpf: "25147896852",
+      nome: "João Victor",
+      data_nascimento: new ISODate("2002-02-13"),
+      formacao: [
+        {
+          nome: "Técnico em Mecânica",
+          instituicao: "IFPE",
+          data: new ISODate("2014-05-26")
+        }
+      ],
+      trabalha_em: [db.salao.findOne({cnpj:"10299564000120"}), db.salao.findOne({cnpj: "36968331000167"})],
+      funcao: "Nail Designer"
+    },
+
+    {
+      cpf: "52416895702",
+      nome: "Alice Sales",
+      data_nascimento: new ISODate("1980-12-10"),
+      formacao: [
+        {
+          nome: "Técnico em Informática",
+          instituicao: "ETE",
+          data: new ISODate("2016-12-27")
+        }
+      ],
+      trabalha_em: [db.salao.findOne({cnpj: "32151976000151"})],
+      funcao: "Maquiadora"
+    },
+
+
+  ]
+
+
+
+)
