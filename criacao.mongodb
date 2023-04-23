@@ -16,7 +16,7 @@ db.servicos.insertMany(
     {
       "nome": "Desencravamento de Unha",
       "codigo": 1,
-      "descricao": "",
+      "descricao": "Onicocriptose ou unha encravada é o processo de inflamação causado pela unha que cresce em direção à pele, perfurando-a e provocando uma lesão. Embora possa ocorre em qualquer pessoa e em qualquer idade, ela é mais comum em meninos e homens, dos 10 aos 30 anos. Esse público é mais propenso a praticar esportes que causam traumas nas unhas dos pés.",
       "custo_minimo": 25.00,
       "categoria": "Nails"
     },
@@ -24,7 +24,7 @@ db.servicos.insertMany(
     {
       "nome": "Dermaplaning",
       "codigo": 2,
-      "descricao": "",
+      "descricao": "o dermaplaning nada mais é que a esfoliação superficial do rosto feita com a lâmina de um bisturi. A lâmina do bisturi remove as células mortas (também chamadas de camada córnea) da pele.",
       "custo_minimo": 60.00,
       "categoria": "Skin"
     },
@@ -32,7 +32,7 @@ db.servicos.insertMany(
     {
       "nome": "Limpeza de pele",
       "codigo": 3,
-      "descricao": "",
+      "descricao": "a limpeza de pele tem como objetivo remover os cravos e as impurezas, desobstruir os poros e melhorar a capacidade de absorção da pele.",
       "custo_minimo": 90.00,
       "categoria": "Skin"
     },
@@ -40,7 +40,7 @@ db.servicos.insertMany(
     {
       "nome": "Fotobiomodulação",
       "codigo": 4,
-      "descricao": "",
+      "descricao": "A fotobiomodulação se refere à aplicação de luz a um sistema biológico capaz de induzir um processo fotoquímico, principalmente nas mitocôndrias.",
       "custo_minimo": 150.00,
       "categoria": "Skin"
     },
@@ -48,7 +48,7 @@ db.servicos.insertMany(
     {
       "nome": "Peeling químico",
       "codigo": 5,
-      "descricao": "",
+      "descricao": "O peeling químico é um tipo de tratamento estético que é feito com a aplicação de ácidos sobre a pele para retirar as camadas danificadas e promover o crescimento de uma camada lisa.",
       "custo_minimo": 65.00,
       "categoria": "Skin"
     },
@@ -56,7 +56,7 @@ db.servicos.insertMany(
     {
       "nome": "Corte",
       "codigo": 6,
-      "descricao": "",
+      "descricao": "O Corte de cabelo é o que define o estilo visual dos cabelos e consequentemente, o estilo visual da pessoa.",
       "custo_minimo": 20.00,
       "categoria": "Hair"
     }, 
@@ -64,7 +64,7 @@ db.servicos.insertMany(
     {
       "nome": "Luzes",
       "codigo": 7,
-      "descricao": "",
+      "descricao": "As luzes no cabelo podem ser definidas como uma técnica de clareamento dos fios.",
       "custo_minimo": 80.00,
       "categoria": "Hair"
     },
@@ -72,7 +72,7 @@ db.servicos.insertMany(
     {
       "nome": "Tintura",
       "codigo": 8,
-      "descricao": "",
+      "descricao": "Coloração de cabelo, ou tintura de cabelo, é a prática de mudar a cor dos cabelos.",
       "custo_minimo": 70.00,
       "categoria": "Hair"
     },
@@ -80,7 +80,7 @@ db.servicos.insertMany(
     {
       "nome": "Selagem",
       "codigo": 9,
-      "descricao": "",
+      "descricao": "É um procedimento que fecha as cutículas do cabelo, reduz volume e deixa os fios alinhados. A selagem capilar é uma ótima opção principalmente para quem tem cabelo liso natural e quer diminuir o volume das madeixas.",
       "custo_minimo": 140.00,
       "categoria": "Hair"
     },
@@ -88,7 +88,7 @@ db.servicos.insertMany(
     {
       "nome": "Progressiva",
       "codigo": 10,
-      "descricao": "",
+      "descricao": "A progressiva tem como objetivo o alisamento dos fios, por isso, ela também é identificada como um químico alisante.",
       "custo_minimo": 250.00,
       "categoria": "Hair"
     },
@@ -96,15 +96,15 @@ db.servicos.insertMany(
     {
       "nome": "Mega Hair",
       "codigo": 11,
-      "descricao": "",
+      "descricao": "É o alongamento de cabelo ou extensão de cabelo. Na prática, refere-se a interações de cabelos naturais para aumentar o comprimento e volume ao cabelo de homens e principalmente de mulheres.",
       "custo_minimo": 250.00,
       "categoria": "Hair"
     },
 
     {
-      "nome": "Foliculite",
+      "nome": "Tratamento de foliculite",
       "codigo": 12,
-      "descricao": "",
+      "descricao": "A foliculite é uma inflamação dos folículos pilosos, que pode acometer a qualquer um em qualquer momento da vida.",
       "custo_minimo": 180.00,
       "categoria": "Hair"
     },
@@ -112,7 +112,7 @@ db.servicos.insertMany(
     {
       "nome": "Unhas em Gel",
       "codigo": 13,
-      "descricao": "",
+      "descricao": "As unhas de gel são moldes artificiais desenvolvidos para fazer o alongamento, aplicando-os sob as unhas naturais. Feitas de gel UV/LED, requerem uma cabine de luz Ultravioleta para secar e fixar o produto, fazendo com que este endureça mais rápido e acelere o processo.",
       "custo_minimo": 160.00,
       "categoria": "Nails"
     },
@@ -120,7 +120,7 @@ db.servicos.insertMany(
     {
       "nome": "Alongamento de unhas",
       "codigo": 14,
-      "descricao": "",
+      "descricao": "Trata-se de uma camada de gel que é aplicada diretamente na unha. A secagem acontece em cabines de luz ultravioleta e não existe manutenção: a cada 20 dias, é necessário lixar e reaplicar. Depois de três aplicações, o gel é retirado e recolocado, processo que deve acontecer no salão.",
       "custo_minimo": 90.00,
       "categoria": "Nails"
     },
@@ -129,7 +129,7 @@ db.servicos.insertMany(
     {
       "nome": "Unhas em Fibra de vidro",
       "codigo": 15,
-      "descricao": "",
+      "descricao": "O alongamento de unha de fibra de vidro é uma técnica utilizada com filamentos de fibra de vidro que são moldados sobre a unha natural. Diferente da unha de gel, que o molde pronto e desenhado é a principal vertente para alongar as unhas, no alongamento com unhas de fibra de vidro o processo é diferente.",
       "custo_minimo": 320.00,
       "categoria": "Nails"
     },
@@ -138,7 +138,7 @@ db.servicos.insertMany(
     {
       "nome": "Banho de gel",
       "codigo": 16,
-      "descricao": "",
+      "descricao": "O banho de gel é uma cobertura, que pode ser feita com gel ou acrílico, o mesmo material usado no processo de alongar as unhas. Esse gel cria uma barreira fortalecedora que protege as unhas e favorece o crescimento delas desde o momento da aplicação.",
       "custo_minimo": 60.00,
       "categoria": "Nails"
     },
@@ -147,7 +147,7 @@ db.servicos.insertMany(
     {
       "nome": "Esmaltação",
       "codigo": 17,
-      "descricao": "",
+      "descricao": "Esmaltar unhas é um serviço de salão de beleza, que se tornou até mesmo um serviço avulso, pois tem muitas mulheres, que intercalam a esmaltação nas unhas, entre as visitas a profissional manicure.",
       "custo_minimo": 25.00,
       "categoria": "Nails"
     },
@@ -155,7 +155,7 @@ db.servicos.insertMany(
     {
       "nome": "Henna",
       "codigo": 18,
-      "descricao": "",
+      "descricao": "A sobrancelha de henna é uma técnica utilizada para preencher os fios dessa região. Portanto, o procedimento é indicado para pessoas que sofrem com falhas nas sobrancelhas, ou então para quem deseja alterar/aprimorar o design das mesmas, ou apenas dar mais volume para os fios.",
       "custo_minimo": 140.00,
       "categoria": "Eyebrows"
     }, 
@@ -163,7 +163,7 @@ db.servicos.insertMany(
     {
       "nome": "Aplicação de Cílios",
       "codigo": 19,
-      "descricao": "",
+      "descricao": "É um procedimento estético que visa a aumentar o volume de fios, sem a necessidade de utilizar maquiagem (ou cílios postiços). Além disso, ele proporciona, também, o preenchimento de falhas, intensificando o olhar.",
       "custo_minimo": 90.00,
       "categoria": "Eyebrows"
     },
@@ -171,7 +171,7 @@ db.servicos.insertMany(
     {
       "nome": "Micropigmentação",
       "codigo": 20,
-      "descricao": "",
+      "descricao": "A micropigmentação é um procedimento estético que consiste em aplicar uma espécie de tinta na pele dessa região para delinear e corrigir falhas. A técnica imita os fios de sobrancelha, o pigmento é aplicado de forma a imitar um fio normal.",
       "custo_minimo": 240.00,
       "categoria": "Eyebrows"
     },  
@@ -179,7 +179,7 @@ db.servicos.insertMany(
     {
       "nome": "Alongamento",
       "codigo": 21,
-      "descricao": "",
+      "descricao": "É um efeito natural e uniforme feito para dar melhor acabamento à sobrancelha.",
       "custo_minimo": 180.00,
       "categoria": "Eyebrows"
     },
@@ -187,7 +187,7 @@ db.servicos.insertMany(
     {
       "nome": "Make básica",
       "codigo": 22,
-      "descricao": "",
+      "descricao": "Maquiagem mais básica, porém bastante hidratante, para eventos cotidianos e rotineiros",
       "custo_minimo": 40.00,
       "categoria": "Make"
     },
@@ -195,7 +195,7 @@ db.servicos.insertMany(
     {
       "nome": "Make casamento",
       "codigo": 23,
-      "descricao": "",
+      "descricao": "Maquiagem mais produzida e para casamento.",
       "custo_minimo": 90.00,
       "categoria": "Make"
     },
@@ -203,7 +203,7 @@ db.servicos.insertMany(
     {
       "nome": "Make artística",
       "codigo": 24,
-      "descricao": "",
+      "descricao": "Maquiagem mais trabalhada, voltada para eventos mais chamativos.",
       "custo_minimo": 170.00,
       "categoria": "Make"
     },
@@ -211,7 +211,7 @@ db.servicos.insertMany(
     {
       "nome": "Trança nagô",
       "codigo": 25,
-      "descricao": "",
+      "descricao": "As tranças nagô são feitas bem rentes ao couro cabeludo para que fiquem presas, elas podem ser feitas com o cabelo natural ou com cabelo sintético.",
       "custo_minimo": 80.00,
       "categoria": "Hair"
     },
@@ -219,7 +219,7 @@ db.servicos.insertMany(
     {
       "nome": "Depilaçao a laser",
       "codigo": 26,
-      "descricao": "",
+      "descricao": "Depilação a laser é o processo de depilação por meio da exposição a pulsos de luz laser que destroem o folículo piloso.",
       "custo_minimo": 90.00,
       "categoria": "Pelos"
     },
@@ -227,7 +227,7 @@ db.servicos.insertMany(
     {
       "nome": "Cera",
       "codigo": 27,
-      "descricao": "",
+      "descricao": "A cera é um método semi-permanente de depilação que remove os pelos da raiz da pele.",
       "custo_minimo": 60.00,
       "categoria": "Pelos"
     },
@@ -235,7 +235,7 @@ db.servicos.insertMany(
     {
       "nome": "Depilaçao elétrica",
       "codigo": 28,
-      "descricao": "",
+      "descricao": "Um depilador elétrico é um aparelho utilizado para remoção de pelos do corpo. O processo de depilação através deste aparelho consiste inicialmente no contato do mesmo com a superfície da pele, e em seguida na extração mecânica de vários cabelos simultaneamente utilizando-se discos giratórios.",
       "custo_minimo": 120.00,
       "categoria": "Pelos"
     },
@@ -243,7 +243,7 @@ db.servicos.insertMany(
     {
       "nome": "Depilaçao com linha",
       "codigo": 29,
-      "descricao": "",
+      "descricao": "Depilação com linha é uma técnica de depilação temporária, que consiste em apenas utilizar um fio 100% de algodão. Esse fio é torcido e enrolado com as duas mãos, inserindo a sua extremidade na boca, de forma a provocar pressão no mesmo.",
       "custo_minimo": 140.00,
       "categoria": "Pelos"
     },
@@ -251,7 +251,7 @@ db.servicos.insertMany(
     {
       "nome": "Lâmina",
       "codigo": 30,
-      "descricao": "",
+      "descricao": "A depilação com lâmina pode ser uma ótima forma de eliminar os pelos indesejados, e é a técnica menos dolorosa.",
       "custo_minimo": 90.00,
       "categoria": "Pelos"
     },
