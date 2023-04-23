@@ -1,7 +1,7 @@
 use('esteticaDB');
 
 //RENAMECOLLECTION -> a coleção salão será renomeada para salões
-// db.salao.renameCollection("saloes");
+db.salao.renameCollection("saloes");
 
 // $WHERE, FUNCTION, PRETTY -> procura e exibe um profissional com o CPF especificado
 db.profissionais.find({$where: function() {

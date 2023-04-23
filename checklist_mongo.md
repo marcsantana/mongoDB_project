@@ -31,5 +31,5 @@
 - [x] LOOKUP
 - [x] FINDONE
 - [x] ADDTOSET
-- [] descomentar renameCollection
-- [] adicionar descrição em criacao.mongodb
+- [x] descomentar renameCollection
+- [x] adicionar descrição em criacao.mongodb
