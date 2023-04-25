@@ -4,11 +4,11 @@ db.createCollection("servicos");
 
 /* 
   Cada serviço terá:
-    - "nome"
+    - Nome
     - Código
     - Descrição
     - Custo Mínimo
-    - "Categoria"
+    - Categoria
 */
 
 db.servicos.insertMany(
@@ -268,7 +268,7 @@ db.createCollection("profissionais");
 /* 
   Cada profissional vai ter:
     - CPF
-    - "nome"
+    - Nome
     - Data de nascimento
     - Formação
     - Função
@@ -462,13 +462,15 @@ db.profissionais.insertMany(
 /* 
   Cada salão de beleza vai conter:
     - CNPJ
-    - "nome"
+    - Nome
     - Local
     - Telefone
     - Avaliação
     - Dias de funcionamento
     - Redes Sociais
     - Funcionários: findOne pelo CPF de profissionais
+    
+    O atributo Funcionários funciona do mesmo jeito que o profissional_faz da coleção acima. Usando o findOne, vinculamos um profissional a um salão.
 
 */
 
