@@ -27,6 +27,7 @@ Listamos os profissionais que trabalham nessa área de estética. Cada profissio
 - Formação (lista de objetos)
 - Função (string)
 - Profissional_faz (lista de findOne)
+
 Esse último atributo serve para vincularmos um (ou mais) serviços a um profissional. Tal vínculo é feito usando-se o método findOne, onde passamos como parâmetro algum código de serviço e ele fica atrelado ao documento (profissional) em questão.
 
 ## Salões
